@@ -17,5 +17,5 @@ jobs:
     - uses: actions/checkout@v2
     - name: Build the Docker image
       run: docker build . --file Dockerfile --tag doc1/docker-image-autobuild:latest
-     - name: Push the Docker image
+    - name: Push the Docker image
       run: docker login -u doc1 -p ${{ secrets.DOCKER_TOKEN }} && docker push doc1/docker-image-autobuild:latest
